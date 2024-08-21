@@ -1,0 +1,142 @@
+body {
+  background-color: #EFFAFA;
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.header {
+  background: url('/public/img/header-shapes.svg') #63BABA center center no-repeat;
+  height: 156px;
+}
+
+.jobs {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-block: 76px;
+  display: grid;
+  gap: 24px;
+}
+
+.jobItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding:  30px 40px;
+  border-radius: 5px;
+  box-shadow: 0px 15px 20px -5px #0D718226;
+  background-color: #FFF;
+
+ /* daralamayı önleme */
+  & > * {
+    flex-grow: 1;
+  }
+
+  a {
+    color: #5CA5A5;
+  }
+
+  h3 {
+    margin-bottom: 7px;
+    list-style: 24px;
+    font-size: 22px;
+  }
+
+  h4 {
+    font-size: 18px;
+    line-height: normal;
+    margin-bottom: 12px;
+
+    span {
+      margin-left: 5px;
+    }
+  }
+
+}
+
+/*logoyu seçiyorum */
+.jobDetails a:has(img) {
+  float: left;
+  margin-right: 24px;
+}
+
+.jobTags {
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+
+  & > * {
+    /* yüzde 50 widthte çok işe yarıyor */
+    width: calc(50% - 20px);
+  }
+
+  a {
+    text-align: center;
+    background-color: #5ca5a515;
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.new, .featured {
+  display: inline-block;
+  color: #FFF;
+  font-size: 14px;
+  background-color: #5CA5A5;
+  text-transform: uppercase;
+  line-height: 14px;
+  border-radius: 12px;
+  padding: 8px 8px 4px;
+}
+
+.featured {
+  background-color: #2B3939;
+}
+
+.featuredJob {
+  border-left: 5px solid #5CA5A5;
+  padding-left: 35px;
+}
+
+.renderTagsContainer {
+  position: relative;
+  margin: 0 auto;
+  width: 1100px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 15px 20px -5px #0D718226;
+  top: -45px;
+  padding: 20px 40px;
+}
+
+.showFilteredTags {
+  display: flex;
+  gap: 16px;
+}
+
+.filterTag {
+  border-radius: 5px;
+  padding: 5px 8px;
+  background-color: #eff6f6;
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  font-size: 16px;
+  color: #5CA5A5;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.removeTags {
+  background-color: #5CA5A5;
+  border: none;
+  padding: 9px;
+  border-radius: 5px;
+}
+
+.removeTags:active {
+  background-color: #2B3939;
+}
