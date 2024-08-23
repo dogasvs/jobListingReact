@@ -138,13 +138,18 @@ function Jobs() {
   });
   
   //sadece hepsini siliyor
-  function deleteTags(id) {
-    setFilter(filter.filter(x => x.id === id));
+  function deleteTags(keyword) {
+    setFilter(filter.filter(f => f !== keyword));
 
     if (filter.length == 0) {
       setShowTagsCont(!showTagsCont);
     }
   }
+
+  function clearAllThem() {
+    setFilter([]);
+  }
+
 
   return (
     <>
@@ -160,6 +165,7 @@ function Jobs() {
         </div>
       ))}
     </div>
+      <button className='clearAllThem' onClick={clearAllThem}>Clear</button>
   </div>
 )}
       <div className="jobs">
